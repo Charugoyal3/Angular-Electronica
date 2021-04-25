@@ -1,0 +1,31 @@
+.checkout{
+    text-align: center;
+}
+.checkout>div {
+    border-bottom: 1px solid grey;
+    width: 42%;
+    padding-bottom:1rem;
+}
+
+.active{
+    color:blue;
+}
+
+.checkout .active{
+    border-bottom: 2px solid blue;
+}
+
+h3{
+    border-bottom: 1px solid grey;
+    padding-bottom: 0.7rem;
+}
+
+.payment{
+    margin-right: 3rem;
+}
+.credit{
+    border:1px solid grey;
+}
+input.ng-invalid.ng-touched{
+    border: 1px solid red;
+}

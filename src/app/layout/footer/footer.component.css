@@ -1,0 +1,18 @@
+li{
+    padding: 0 0.7rem;
+    margin-left: 0.7rem;
+}
+li::after{
+    content: '';
+    border-right: 1px solid grey;
+    padding-left: 1rem;;
+  
+}
+li:last-child::after{
+    border-right:none;
+}
+
+footer{
+    border-top: 1px solid grey;
+    margin-top: 1rem;
+}

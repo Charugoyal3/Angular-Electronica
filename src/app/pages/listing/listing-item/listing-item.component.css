@@ -1,0 +1,27 @@
+p{
+    margin:0;
+    padding:0;
+}
+.checked {
+    color: orange;
+  }
+
+ 
+.btn{
+    display: none;
+    position: relative;
+    bottom: 32px;
+    left: 0;
+    width: 100%;
+  
+}
+
+img:hover + .btn, .btn:hover {
+    display: inline-block;
+}
+
+@media  screen and (max-width:768px) {
+    .btn{
+        display: inline-block;
+    }
+}

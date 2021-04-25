@@ -1,0 +1,12 @@
+<app-header>
+    
+</app-header>
+<div class="row">
+    <div class="d-flex flex-column justify-content-center align-item-center text-center">
+        <h3>Product Listing</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta, maxim,consectetur adipisicing elit. Dicta, maxime</p>
+    </div>
+    <div class="col-md-4 col-sm-6 " *ngFor="let product of productList">
+        <app-listing-item [productItem] ="product"></app-listing-item>
+    </div>
+</div>
