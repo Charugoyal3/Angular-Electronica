@@ -38,7 +38,7 @@ export class CouponComponent {
   }
   onKeyUpEnter($event: any) {
     if ($event.target.value == "Bootcamp2021") {
-      this.totalBill = (this.cartTotal - ((this.cartTotal * 30) / 100)) + 13;
+      this.totalBill = (this.cartTotal - ((this.cartTotal * 10) / 100)) + 13;
 
     }
     localStorage.setItem('bill', JSON.stringify(this.totalBill));

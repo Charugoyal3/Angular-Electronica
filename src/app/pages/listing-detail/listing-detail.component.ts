@@ -35,6 +35,7 @@ export class ListingDetailComponent implements OnInit {
 
   imageChange(event:any){
     this.imageurl=this.product.imageurl[event.target.value];
+    localStorage.setItem("image",event.target.value);
 
   }
  

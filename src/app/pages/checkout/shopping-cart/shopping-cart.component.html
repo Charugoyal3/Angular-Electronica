@@ -9,9 +9,9 @@
     <div class="shopping col-md-7" *ngIf="carts.length>=1">
         <h3> Shopping Cart</h3>
        
-        <div class="d-flex justify-content-between cart mt-4" *ngFor="let item of carts">
+        <div class="d-flex justify-content-between cart mt-4" *ngFor="let item of carts, let i=index">
             <div class="d-flex">
-                <img [src]="item.imageurl[0]" class="img-fluid" width="40%">
+                <img [src]="imageUrl[i]" class="img-fluid" width="40%">
                 <div class="ms-2">
                     <div>{{item.name}}</div>
                     <p>{{item.description}}</p>

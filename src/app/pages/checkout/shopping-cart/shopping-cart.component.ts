@@ -8,15 +8,24 @@ import { ActivatedRoute } from '@angular/router';
   templateUrl: './shopping-cart.component.html',
   styleUrls: ['./shopping-cart.component.css']
 })
-export class ShoppingCartComponent{
+export class ShoppingCartComponent implements OnInit{
   carts:any;
   cartTotal!:number;
+  imageUrl:Array<number>=[];
+  j:number=0;
 
   constructor(private cartService:CartService){
     this.cartService.cartItems.subscribe((val)=>{
         this.carts=val;
-        console.log(this.carts);
     });
+  
+  
+  }
+  ngOnInit(){
+    for(let i in this.carts){
+      this.imageUrl[this.j]=this.carts[i].imageurl[localStorage.getItem("image")|| "{}"];
+      this.j++;
+    }
   }
 
   onChangeEvent(cartItem: any,event:any){
@@ -28,9 +37,4 @@ export class ShoppingCartComponent{
     console.log(this.cartTotal);
 
   }
- 
-
-
-
-
 }
