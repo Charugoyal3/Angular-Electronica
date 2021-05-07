@@ -1,9 +1,26 @@
-<div class="d-flex justify-content-end py-2 ">
-    <ul class="list-unstyled d-flex">
+<!-- <div class="d-flex justify-content-end py-2 bg-dark">
+    <ul class="list-unstyled d-flex align-items-center ">
         <li><a href="/dashboard">Home </a></li>
         <li> About</li>
         <li> <a href="/shopping" >Shop</a> </li>
         <li>Help</li>
-        <li><a href="/shopping" class="btn btn-primary">Your Cart</a></li>
+        <li><a routerLink="/shopping" class="btn btn-primary">Your Cart</a></li>
     </ul>
-</div>
+</div> -->
+<nav class="navbar navbar-expand-lg bg-dark navbar-dark py-3">
+    <div class="container">
+      <a class="navbar-brand title" routerLink="/dashboard">Electronica</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
+        <div class="navbar-nav">
+          <a class="nav-link" routerLinkActive="active" aria-current="page" routerLink="/dashboard">Home</a>
+          <a class="nav-link" routerLinkActive="active">About</a>
+          <a class="nav-link" routerLinkActive="active" routerLink="shopping">Shop</a>
+          <a class="nav-link" routerLinkActive="active">Help</a>
+          <a class="btn btn-primary"  routerLink="shopping" *ngIf="!router.url.includes('shopping')">Your Cart</a>
+        </div>
+      </div>
+    </div>
+  </nav>

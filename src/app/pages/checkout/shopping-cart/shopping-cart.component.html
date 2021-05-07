@@ -3,30 +3,33 @@
     <div>2. Shipping Detail</div>
     <div>3. Payment Options</div>
 </div>
+<h2 class="text-center mt-4" *ngIf="carts.length<1">Your Cart Is Empty!! </h2>
 
 <div class="row mt-4">
-    <div class="shopping col-md-9">
+    <div class="shopping col-md-7" *ngIf="carts.length>=1">
         <h3> Shopping Cart</h3>
-        <div class="d-flex justify-content-between cart">
-            <div class="d-flex col-md-6">
-                <img src="https://i.ytimg.com/vi/IqdV8crqSYM/maxresdefault.jpg" class="img-fluid" width="20%">
+       
+        <div class="d-flex justify-content-between cart mt-4" *ngFor="let item of carts">
+            <div class="d-flex">
+                <img [src]="item.imageurl[0]" class="img-fluid" width="40%">
                 <div class="ms-2">
-                    <div>Product Name</div>
-                    <p>Lorem ipsum dolor sit amet.</p>
-                    <p>$300</p>
+                    <div>{{item.name}}</div>
+                    <p>{{item.description}}</p>
+                    <p>${{item.price}}</p>
                 </div>
             </div>
-            <div class="number-input ">
-                <input class="quantity" min="0" name="quantity" value="1" type="number">
+            <div class="number-input">
+                <input class="quantity" min="1" name="quantity" value={{item.qty}} type="number"
+                    (change)="onChangeEvent(item,$event)">
             </div>
         </div>
     </div>
-    <div class="col-md-2">
+    <div class="col-md-3" *ngIf="carts.length>=1">
         <h3> Summary</h3>
         <app-coupon></app-coupon>
     </div>
 </div>
-<div class="d-flex">
+<div class="d-flex my-4">
     <button class="btn btn-primary me-2"routerLink="/shipping">Next</button>
     <button class="btn btn-secondary" routerLink="/dashboard">Cancel</button>
 </div>

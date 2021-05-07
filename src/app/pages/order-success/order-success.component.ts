@@ -6,10 +6,16 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./order-success.component.css']
 })
 export class OrderSuccessComponent implements OnInit {
-
-  constructor() { }
+  users!:any;
+  constructor() {
+    localStorage.setItem('bill','null');
+    this.users = JSON.parse(localStorage.getItem('user')|| '{}');
+    console.log(this.users.firstname);
+   }
 
   ngOnInit(): void {
   }
-
+  success(){
+    localStorage.removeItem("user");
+  }
 }

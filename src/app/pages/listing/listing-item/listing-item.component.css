@@ -10,10 +10,15 @@ p{
 .btn{
     display: none;
     position: relative;
-    bottom: 32px;
+    bottom: 30px;
     left: 0;
     width: 100%;
+    border-radius: 0%;
   
+}
+a{
+    text-decoration: none;
+    color: black;
 }
 
 img:hover + .btn, .btn:hover {

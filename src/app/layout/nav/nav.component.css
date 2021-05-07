@@ -1,18 +1,26 @@
-li{
-    padding: 0 1rem;
+a{
+    /* padding: 0 1rem; */
     margin-left: 1rem;
+    color:#fff;
+    color:#fff;
+    text-decoration: none;
 }
-li::after{
+a::after{
     content: '';
     border-right: 1px solid grey;
-    padding-left: 1rem;;
+    padding-left: 1rem;
   
 }
-li:last-child::after, li:nth-child(4)::after{
+a:last-child::after{
     border-right:none;
 }
 
-a{
-    color:black;
-    text-decoration: none;
+.title::after{
+    border-right: none;
+}
+
+@media only screen and (max-width:985px){
+    a::after{
+        border-right: none;
+    }
 }

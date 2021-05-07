@@ -29,3 +29,11 @@ h3{
 input.ng-invalid.ng-touched{
     border: 1px solid red;
 }
+
+.cardno{
+    width:auto;
+}
+
+.disableClass1{
+    color:rgb(163, 160, 160);
+}

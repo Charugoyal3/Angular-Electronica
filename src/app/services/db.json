@@ -1,0 +1,80 @@
+{
+    "Products":[
+        {
+            "id":1,
+            "name":"Book",
+            "description":"This is book ",
+            "price":100,
+            "imageurl":[
+                "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTINaOiWDI505ivaAx3oPoHLr_epvQ9KVvO8Lxu1YXniCpxq1NDJUL_ObhdwcBbVcv4qsfXjIc&usqp=CAc",
+                "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTNKLYL-h4TTlDqEYil6-gLYp1qMb9MFQnsmRNo-pZyseUKLEORW6aG_iRG3yAlJ4qLRW6hj8UH&usqp=CAc",
+                "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTURcYc_9l46Zek-eyzgzJFKBjZOo_Akv4Br1G0qAktQectopejvoFqJ2f6nA&usqp=CAc"
+            ],
+            "gty":1,
+            "colorvariants":["blue","orange","purple"],
+            "productReviews":[{
+                "useranme":"Charu",
+                "comment":"This is good",
+                "ratings":3
+            }]
+
+        },
+        {
+            "id":2,
+            "name":"Angular Book",
+            "description":"This is book ",
+            "price":100,
+            "imageurl":[
+                "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTINaOiWDI505ivaAx3oPoHLr_epvQ9KVvO8Lxu1YXniCpxq1NDJUL_ObhdwcBbVcv4qsfXjIc&usqp=CAc",
+                "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTNKLYL-h4TTlDqEYil6-gLYp1qMb9MFQnsmRNo-pZyseUKLEORW6aG_iRG3yAlJ4qLRW6hj8UH&usqp=CAc",
+                "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTURcYc_9l46Zek-eyzgzJFKBjZOo_Akv4Br1G0qAktQectopejvoFqJ2f6nA&usqp=CAc"
+            ],
+            "gty":1,
+            "colorvariants":["blue","orange","purple"],
+            "productReviews":[{
+                "useranme":"Charu",
+                "comment":"This is good",
+                "ratings":3
+            }]
+
+        },
+        {
+            "id":3,
+            "name":"Angular Book",
+            "description":"This is book ",
+            "price":100,
+            "imageurl":[
+                "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTINaOiWDI505ivaAx3oPoHLr_epvQ9KVvO8Lxu1YXniCpxq1NDJUL_ObhdwcBbVcv4qsfXjIc&usqp=CAc",
+                "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTNKLYL-h4TTlDqEYil6-gLYp1qMb9MFQnsmRNo-pZyseUKLEORW6aG_iRG3yAlJ4qLRW6hj8UH&usqp=CAc",
+                "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTURcYc_9l46Zek-eyzgzJFKBjZOo_Akv4Br1G0qAktQectopejvoFqJ2f6nA&usqp=CAc"
+            ],
+            "gty":1,
+            "colorvariants":["blue","orange","purple"],
+            "productReviews":[{
+                "useranme":"Charu",
+                "comment":"This is good",
+                "ratings":3
+            }]
+
+        },
+        {
+            "id":4,
+            "name":"Angular Book",
+            "description":"This is book ",
+            "price":100,
+            "imageurl":[
+                "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTINaOiWDI505ivaAx3oPoHLr_epvQ9KVvO8Lxu1YXniCpxq1NDJUL_ObhdwcBbVcv4qsfXjIc&usqp=CAc",
+                "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTNKLYL-h4TTlDqEYil6-gLYp1qMb9MFQnsmRNo-pZyseUKLEORW6aG_iRG3yAlJ4qLRW6hj8UH&usqp=CAc",
+                "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTURcYc_9l46Zek-eyzgzJFKBjZOo_Akv4Br1G0qAktQectopejvoFqJ2f6nA&usqp=CAc"
+            ],
+            "gty":1,
+            "colorvariants":["blue","orange","purple"],
+            "productReviews":[{
+                "useranme":"Charu",
+                "comment":"This is good",
+                "ratings":3
+            }]
+
+        }
+    ]
+}

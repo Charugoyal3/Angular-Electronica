@@ -1,7 +1,27 @@
 <div class="d-flex flex-column justify-content-center align-items-center mb-5">
     <h4> Your Order has been placed </h4>
     <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt nostrum maxime recusandae adipisci ut, numquam ullam aperiam doloremque debitis ea?
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt nostrum maxime recusandae adipisci ut, numquam
+        ullam aperiam doloremque debitis ea?
     </p>
-    <button class="btn btn-primary" routerLink="/dashboard">Continue Shopping</button>
+    <button class="btn btn-primary" routerLink="/dashboard" (click)="success()">Continue Shopping</button>
+</div>
+<div>
+    <div>
+        <h3>Shopping Items</h3>
+        <app-summary></app-summary>
+    </div>
+    <div class="mt-4">
+        <h3>Shipping Details</h3>
+        <h6>FirstName : <span>{{users.firstname}}</span></h6>
+        <h6>LastName : <span>{{users.lastname}}</span></h6>
+        <h6>Address : <span>{{users.address}}</span></h6>
+        <h6>Address2 : <span>{{users.address2}}</span></h6>
+        <h6>City : <span>{{users.city}}</span></h6>
+        <h6>Zip : <span>{{users.zip}}</span></h6>
+        <h6>Phone : <span>{{users.phone}}</span></h6>
+    </div>
+    <!-- <div  class="mt-4">
+        <h3>Payment Details</h3>
+    </div> -->
 </div>

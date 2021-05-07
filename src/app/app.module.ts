@@ -1,6 +1,9 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
+import { NgxPaginationModule} from 'ngx-pagination';
+
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -18,6 +21,7 @@ import { ErrorComponent } from './pages/error/error.component';
 import { ListingItemComponent } from './pages/listing/listing-item/listing-item.component';
 import { CouponComponent } from './pages/checkout/common/coupon/coupon.component';
 import { SummaryComponent } from './pages/checkout/common/summary/summary.component';
+import { Ng2SearchPipeModule } from 'ng2-search-filter';
 
 @NgModule({
   declarations: [
@@ -40,7 +44,10 @@ import { SummaryComponent } from './pages/checkout/common/summary/summary.compon
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule,
+    Ng2SearchPipeModule,
+    NgxPaginationModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -17,7 +17,7 @@
 input.ng-invalid.ng-touched{
     border: 1px solid red;
 }
-input{
+input:focus{
     outline: none;
     text-decoration: none;
 }

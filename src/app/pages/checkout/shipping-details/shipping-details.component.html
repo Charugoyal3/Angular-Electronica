@@ -6,10 +6,10 @@
 
 <div class="d-flex mt-4">
     <div class="row">
-    <div class="col-md-9 shipping">
+    <div class="col-md-7 shipping">
         <h3> Shipping Details</h3>
               <div class="mt-4">
-              <form (ngSubmit)="onSubmit()" #f="ngForm" ngNativeValidate>
+              <form #f="ngForm" (ngSubmit)="onSubmit(f)">
                     <div id="user-data">
                         <div class="d-flex">
                             <input type="text" id="firstname" class="form-control me-3" name="firstname" ngModel required firstname placeholder="Firstname">
@@ -24,8 +24,8 @@
                     </div>
 
                     <div class="d-flex mt-4">
-                            <select name="country" id="country" class="form-control me-3" [ngModel]="defaultQuestion" name="country" required>
-                            <option value="India" >India</option>
+                            <select name="country" id="country" class="form-control me-3" name="country" required>
+                            <option value="India" selected >India</option>
                             <option value="USA">USA</option>
                             <option value="Nepal">Nepal</option>
                             </select>
@@ -38,14 +38,14 @@
                         <input type="number" id="phone" class="form-control" name="phone" ngModel required  placeholder="Phone Number">
                     </div>
                     <div class="d-flex mt-4">
-                        <button class="btn btn-primary me-2" [disabled]="!f.valid" routerLink="/payment">Next</button>
-                        <button class="btn btn-secondary" routerLink="/dashboard">Cancel</button>
+                        <button type="submit" class="btn btn-primary me-2" [disabled]="!f.valid">Next</button>
+                        <button type="button" class="btn btn-secondary" (click)="back()">Cancel</button>
                     </div>
                 </form>
               </div>
           
     </div>
-    <div class="col-md-2">
+    <div class="col-md-3">
         <h3>Summary</h3>
         <app-summary></app-summary>
         <app-coupon></app-coupon>
