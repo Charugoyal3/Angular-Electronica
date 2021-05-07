@@ -1,55 +1,61 @@
 <div class="d-flex justify-content-around checkout">
-    <div >1. Shopping Cart</div>
+    <div>1. Shopping Cart</div>
     <div class="active">2. Shipping Detail</div>
     <div>3. Payment Options</div>
 </div>
 
 <div class="d-flex mt-4">
     <div class="row">
-    <div class="col-md-7 shipping">
-        <h3> Shipping Details</h3>
-              <div class="mt-4">
-              <form #f="ngForm" (ngSubmit)="onSubmit(f)">
+        <div class="col-md-7 shipping">
+            <h3> Shipping Details</h3>
+            <div class="mt-4">
+                <form #f="ngForm" (ngSubmit)="onSubmit(f)">
                     <div id="user-data">
                         <div class="d-flex">
-                            <input type="text" id="firstname" class="form-control me-3" name="firstname" ngModel required firstname placeholder="Firstname">
-                            <input type="text" id="lastname" class="form-control" name="lastname" ngModel required lastname placeholder="Lastname">
+                            <input type="text" id="firstname" class="form-control me-3" name="firstname" ngModel
+                                required firstname placeholder="Firstname">
+                            <input type="text" id="lastname" class="form-control" name="lastname" ngModel required
+                                lastname placeholder="Lastname">
                         </div>
                     </div>
                     <div id="form-group " class="mt-4">
-                        <input type="text" id="address" class="form-control" name="address" ngModel required placeholder="Address">
+                        <input type="text" id="address" class="form-control" name="address" ngModel required
+                            placeholder="Address">
                     </div>
                     <div id="form-group" class="mt-4">
-                        <input type="text" id="address2" class="form-control" name="address2" ngModel required placeholder="Address 2">
+                        <input type="text" id="address2" class="form-control" name="address2" ngModel required
+                            placeholder="Address 2">
                     </div>
 
                     <div class="d-flex mt-4">
-                            <select name="country" id="country" class="form-control me-3" name="country" required>
-                            <option value="India" selected >India</option>
+                        <select name="country" id="country" class="form-control me-3" name="country" required>
+                            <option value="India" selected>India</option>
                             <option value="USA">USA</option>
                             <option value="Nepal">Nepal</option>
-                            </select>
+                        </select>
                         <div id="form-group">
-                            <input type="text" id="city" class="form-control" name="city" ngModel required placeholder="City">
+                            <input type="text" id="city" class="form-control" name="city" ngModel required
+                                placeholder="City">
                         </div>
                     </div>
                     <div class="d-flex mt-4">
-                        <input type="number" id="zip" class="form-control" name="zip" class="me-3" ngModel required placeholder="Zip/Postal Code">
-                        <input type="number" id="phone" class="form-control" name="phone" ngModel required  placeholder="Phone Number">
+                        <input type="number" id="zip" class="form-control" name="zip" class="me-3" ngModel required
+                            placeholder="Zip/Postal Code">
+                        <input type="number" id="phone" class="form-control" name="phone" ngModel required
+                            placeholder="Phone Number">
                     </div>
                     <div class="d-flex mt-4">
                         <button type="submit" class="btn btn-primary me-2" [disabled]="!f.valid">Next</button>
                         <button type="button" class="btn btn-secondary" (click)="back()">Cancel</button>
                     </div>
                 </form>
-              </div>
-          
-    </div>
-    <div class="col-md-3">
-        <h3>Summary</h3>
-        <app-summary></app-summary>
-        <app-coupon></app-coupon>
-    </div>
-</div>
-</div>
+            </div>
 
+        </div>
+        <div class="col-md-3">
+            <h3>Summary</h3>
+            <app-summary></app-summary>
+            <app-coupon></app-coupon>
+        </div>
+    </div>
+</div>

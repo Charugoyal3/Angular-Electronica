@@ -18,7 +18,9 @@ a:last-child::after{
 .title::after{
     border-right: none;
 }
-
+.length{
+    color:rgb(240, 71, 28);
+}
 @media only screen and (max-width:985px){
     a::after{
         border-right: none;

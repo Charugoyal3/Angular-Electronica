@@ -32,7 +32,7 @@
     <h3> REVIEWS</h3>
     <div *ngFor="let i of product.productReviews" class="my-4">
         <div class="row">
-            <div class="col-md-4 col-sm-6 d-flex w-50">
+            <div class="col-md-4 col-sm-6 d-flex">
                 <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRLe5PABjXc17cjIMOibECLM7ppDwMmiDg6Dw&usqp=CAU"
                     class="rounded-circle" width="24%" height="86%">
                 <div class="ms-3 align-items-center">
@@ -41,7 +41,7 @@
                     <p>{{i.ratings}} ratings</p>
                 </div>
             </div>
-            <div class="col-md-6 col-sm-6">
+            <div class="col-md-8 col-sm-6">
                 <p class="review-text">{{i.comment}}</p>
             </div>
         </div>

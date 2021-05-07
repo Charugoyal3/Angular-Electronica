@@ -8,7 +8,7 @@
 <div class="row mt-4">
     <div class="shopping col-md-7" *ngIf="carts.length>=1">
         <h3> Shopping Cart</h3>
-       
+
         <div class="d-flex justify-content-between cart mt-4" *ngFor="let item of carts, let i=index">
             <div class="d-flex">
                 <img [src]="imageUrl[i]" class="img-fluid" width="40%">
@@ -19,7 +19,7 @@
                 </div>
             </div>
             <div class="number-input">
-                <input class="quantity" min="1" name="quantity" value={{item.qty}} type="number"
+                <input class="quantity" min="1" name="quantity" [value]="item.qty" type="number"
                     (change)="onChangeEvent(item,$event)">
             </div>
         </div>
@@ -30,6 +30,6 @@
     </div>
 </div>
 <div class="d-flex my-4">
-    <button class="btn btn-primary me-2"routerLink="/shipping">Next</button>
+    <button class="btn btn-primary me-2" routerLink="/shipping">Next</button>
     <button class="btn btn-secondary" routerLink="/dashboard">Cancel</button>
 </div>

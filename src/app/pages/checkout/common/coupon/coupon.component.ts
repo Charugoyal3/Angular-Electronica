@@ -1,5 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { CartService } from 'src/app/services/cart.service';
+declare let $:any;
 @Component({
   selector: 'app-coupon',
   templateUrl: './coupon.component.html',
@@ -7,46 +8,56 @@ import { CartService } from 'src/app/services/cart.service';
 })
 export class CouponComponent {
   carts: any;
-  cartTotal = 0;
-  totalBill: number = 0;
   totalamount: number = 0;
   name = "";
   message = "Coupon Successfull"
   coupon = "Bootcamp2021";
 
 
-  constructor(private cartService: CartService) {}
+
+  constructor(private cartService: CartService) { }
   ngOnInit(): void {
     this.cartService.cartItems.subscribe((val) => {
       this.carts = val;
-    
-
+      
     });
 
-    for (let i in this.carts) {
-      this.cartTotal += (this.carts[i].qty * this.carts[i].price);
-      console.log(this.cartTotal);
+  }
+  get cartTotal(){
+    let total:number=0;
+    for (let item of this.carts) {
+      total += (item.qty *item.price);
+      console.log(item);
+
 
     }
+    return total;
+  }
+  get totalBill(){
+    let Bill=0;
     if (localStorage.getItem('bill') == "null") {
-      this.totalBill = 13 + this.cartTotal;
+      Bill = 13 + this.cartTotal;
     }
     else {
-      this.totalBill = JSON.parse(localStorage.getItem('bill') || '{}');
+      Bill = JSON.parse(localStorage.getItem('bill') || '{}');
     }
+    if ($("#code").val() == "Bootcamp2021") {
+      Bill = (this.cartTotal - ((this.cartTotal * 10) / 100)) + 13;
 
+    }
+    console.log(Bill);
+    return Bill;
+   
   }
-  onKeyUpEnter($event: any) {
-    if ($event.target.value == "Bootcamp2021") {
-      this.totalBill = (this.cartTotal - ((this.cartTotal * 10) / 100)) + 13;
 
-    }
+  onKeyUpEnter($event: any) {
+
     localStorage.setItem('bill', JSON.stringify(this.totalBill));
     return (localStorage.getItem('bill'));
 
   }
 }
-    
+
 
 
 

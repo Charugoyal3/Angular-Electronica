@@ -10,7 +10,6 @@ export class OrderSuccessComponent implements OnInit {
   constructor() {
     localStorage.setItem('bill','null');
     this.users = JSON.parse(localStorage.getItem('user')|| '{}');
-    console.log(this.users.firstname);
    }
 
   ngOnInit(): void {
