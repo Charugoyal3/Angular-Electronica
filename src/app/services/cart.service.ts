@@ -33,7 +33,7 @@ export class CartService {
             const updatedValue = [...currentValue, cartItem];
             this.cartItems.next(updatedValue);
         }
-        console.log(this.cartItems.value);
+        // console.log(this.cartItems.value);
     }
 
 }

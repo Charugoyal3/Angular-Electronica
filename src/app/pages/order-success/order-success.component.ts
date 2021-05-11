@@ -11,7 +11,13 @@ export class OrderSuccessComponent implements OnInit {
   carts:any;
 
   constructor(private cartService:CartService){
-    // this.cartService.cart=0;
+    
+    this.cartService.cartItems.subscribe((val)=>{
+      this.carts=val;
+      // console.log(this.carts);
+  });
+  this.cartService.cart=0;
+   this.cartService.cartItems.value.length=0;
 
     localStorage.setItem('bill','null');
     this.users = JSON.parse(localStorage.getItem('user')|| '{}');
