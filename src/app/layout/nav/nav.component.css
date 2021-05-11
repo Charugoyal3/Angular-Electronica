@@ -19,7 +19,10 @@ a:last-child::after{
     border-right: none;
 }
 .length{
-    color:rgb(240, 71, 28);
+    color: #fff;
+    background-color: rgb(240, 71, 28);
+    padding: 7px 10px;
+    border-radius: 19%;
 }
 @media only screen and (max-width:985px){
     a::after{

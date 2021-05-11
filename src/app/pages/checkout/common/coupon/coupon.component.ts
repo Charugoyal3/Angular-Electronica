@@ -27,7 +27,7 @@ export class CouponComponent {
     let total:number=0;
     for (let item of this.carts) {
       total += (item.qty *item.price);
-      console.log(item);
+      // console.log(item);
 
 
     }
@@ -45,7 +45,7 @@ export class CouponComponent {
       Bill = (this.cartTotal - ((this.cartTotal * 10) / 100)) + 13;
 
     }
-    console.log(Bill);
+    // console.log(Bill);
     return Bill;
    
   }

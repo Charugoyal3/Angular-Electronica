@@ -15,7 +15,7 @@ export class ShoppingCartComponent implements OnInit{
   constructor(private cartService:CartService){
     this.cartService.cartItems.subscribe((val)=>{
         this.carts=val;
-        console.log(this.carts);
+        // console.log(this.carts);
     });
   
   

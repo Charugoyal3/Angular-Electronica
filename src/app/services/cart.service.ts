@@ -16,7 +16,7 @@ export class CartService {
     set cart(cartItem: any) {
         let productExists = false;
         let cartList = this.cartItems.value;
-        console.log(cartItem);
+        // console.log(cartItem);
       
         for (let i = 0; i < cartList.length; i++) {
             if (cartList[i].id == cartItem.id) {

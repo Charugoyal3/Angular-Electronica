@@ -17,9 +17,9 @@
         <div class="navbar-nav">
           <a class="nav-link" routerLinkActive="active" aria-current="page" routerLink="/dashboard">Home</a>
           <a class="nav-link" routerLinkActive="active">About</a>
-          <a class="nav-link" routerLinkActive="active" routerLink="shopping">Shop</a>
+          <a class="nav-link" routerLinkActive="active" routerLink="shopping">Shop</a>Zip
           <a class="nav-link" routerLinkActive="active">Help</a>
-          <a class="btn btn-primary"  routerLink="shopping" *ngIf="!router.url.includes('shopping')">Your Cart<span class="ms-2 length">{{carts.length}}</span></a>
+          <a class="btn btn-primary"  routerLink="shopping" *ngIf="!router.url.includes('shopping')">Your Cart<span class="ms-2 length " *ngIf="carts.length>=1">{{carts.length}}</span></a>
         </div>
       </div>
     </div>

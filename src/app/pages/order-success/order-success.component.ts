@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { CartService} from 'src/app/services/cart.service';
 
 @Component({
   selector: 'app-order-success',
@@ -7,7 +8,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class OrderSuccessComponent implements OnInit {
   users!:any;
-  constructor() {
+  carts:any;
+
+  constructor(private cartService:CartService){
+    // this.cartService.cart=0;
+
     localStorage.setItem('bill','null');
     this.users = JSON.parse(localStorage.getItem('user')|| '{}');
    }
@@ -15,6 +20,9 @@ export class OrderSuccessComponent implements OnInit {
   ngOnInit(): void {
   }
   success(){
+    // let cartList = this.cartService.cart.value;
+    // console.log(cartList);
+    // console.log(cartList.length);
     localStorage.removeItem("user");
   }
 }
